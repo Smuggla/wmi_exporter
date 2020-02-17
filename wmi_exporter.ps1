@@ -1,0 +1,1 @@
+C:\wmi_exporter\wmi_exporter.exe --collectors.enabled=$($ENV:COLLECTORS) --telemetry.addr=$($ENV:LISTEN_ADDR):$($ENV:METRIC_PORT) --telemetry.path=$($ENV:METRIC_PATH)
