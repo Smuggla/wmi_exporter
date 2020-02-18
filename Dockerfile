@@ -55,7 +55,7 @@ FROM mcr.microsoft.com/windows/servercore:ltsc2019 AS base
 
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
-ENV COLLECTORS="cpu,cs,container,logical_disk,net,os,service,system,textfile"  \
+ENV COLLECTORS="cpu,cs,container,logical_disk,net,os,service,system"  \
     LISTEN_ADDR=0.0.0.0 \
     METRIC_PORT=9182 \ 
     METRIC_PATH="/metrics"
