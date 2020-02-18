@@ -35,7 +35,7 @@ RUN [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tl
     Remove-Item git.zip
 
 FROM mcr.microsoft.com/windows/servercore/insider:10.0.17763.107 as compiler
-
+# Insider is needed to address "panic: Failed to load netapi32.dll: The specified module could not be found" https://github.com/golang/go/issues/21867
 COPY --from=builder /go /go
 COPY --from=builder /git /git
 
